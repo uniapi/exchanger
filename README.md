@@ -3,19 +3,20 @@ This Software Follow *Semantic Versioning Specification* [SemVer](http://semver.
 # Exchanger
 
 ## Task
-Implement a function **exchanger** changing notes to the following coins:
-H - half a dollar
-Q - a quarter
-D - a dime
-N - a nickel
-P - a penny
+Implement a function **exchanger** changing currency notes to the combination of the minimal possible amount of coins with the following notation:
+* H - half a dollar
+* Q - a quarter
+* D - a dime
+* N - a nickel
+* P - a penny
 
 ### Example:
 ```js
-exchanger(0)    // { }
-exchanger(1)    // { "P": 1 }
-exchanger(15)   // { "D": 1, "N": 1 }
-exchanger(1000000) // throw " "
+exchanger(0)     // { }
+exchanger(1)     // { "P": 1 }
+exchanger(15)    // { "D": 1, "N": 1 }
+exchanger(294)   // { "H": 5, "Q": 1, "D": 1", "N": 1, "P": 4 } 
+exchanger(10000) // throws "The exchange limit is exceeded"
 ```
 
 ### Requirements
